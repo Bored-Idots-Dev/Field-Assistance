@@ -1,0 +1,145 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 4; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 6; ]
+class ModifySettingsDel extends WatchUi.Menu2InputDelegate{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 7; @position = 16; ]
+    private
+    var isRef;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 8; @position = 16; ]
+    private
+    var SettingsData;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 9; @position = 15; ]
+    public
+    var ButtonID;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 10; ]
+    function initialize(isRef as Boolean, SettingsData as Dictionary) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_10_70_14_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 11 8 ]
+        %tmp.2 = lgetv %isRef;
+        putv self :isRef %tmp.2;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 12 8 ]
+        %tmp.4 = lgetv %SettingsData;
+        putv self :SettingsData %tmp.4;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 13 8 ]
+        %tmp.6 = getv ? :Menu2InputDelegate;
+        %tmp.7 = getv function %tmp.6 :initialize;
+        invoke %tmp.6 %tmp.7();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_10_70_14_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 16; ]
+    function onMenu() as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_16_33_18_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 17 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_16_33_18_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 20; ]
+    public
+    function onSelect(item as MenuItem) {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_20_46_24_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 21 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_20_46_24_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_20_46_24_4_stop" ]
+        %chosenOption.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getLabel;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %chosenOption.1 %tmp.3;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 22 8 ]
+        %tmp.5 = lgetv %chosenOption.1;
+        putv self :ButtonID %tmp.5;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 23 8 ]
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function %tmp.6 :pushView;
+        %tmp.11 = getm $;
+        %tmp.12 = getv %tmp.11 :NumberPicker;
+        %tmp.14 = lgetv %chosenOption.1;
+        %tmp.15 = false;
+        %tmp.16 = "";
+        %tmp.17 = 1;
+        %tmp.8 = newc %tmp.12 (%tmp.14, %tmp.15, %tmp.16, %tmp.17);
+        %tmp.21 = getm $;
+        %tmp.22 = getv %tmp.21 :ModifySettingsValuesDelegate;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_begin:
+        %tmp.24 = getv ? :isRef;
+        bf %tmp.24 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_true:
+        %tmp.25 = "_FA_CustomSavedREFS";
+        push %tmp.25;
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_false:
+        %tmp.26 = "_FA_CustomSavedStandOffs";
+        push %tmp.26;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_end:
+        %tmp.27 = phi [%tmp.24 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_begin] [%tmp.25 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_true] [%tmp.26 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_false] [%tmp.27 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_23_108_23_140_end];
+        %tmp.29 = lgetv %self;
+        %tmp.31 = lgetv %item;
+        %tmp.32 = '.';
+        %tmp.18 = newc %tmp.22 (%tmp.27, %tmp.29, %tmp.31, %tmp.32);
+        %tmp.33 = getm $.Toybox.WatchUi;
+        %tmp.34 = getv %tmp.33 :SLIDE_IMMEDIATE;
+        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.18, %tmp.34);
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_20_46_24_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 25; ]
+    public
+    function setValues(Key as String, Value as String) {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_25_61_33_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 26 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_stmt:
+        %tmp.1 = lgetv %self;
+        %tmp.2 = getv %tmp.1 :isRef;
+        bf %tmp.2 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_22_28_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 27 12 ]
+        %tmp.3 = getv self :SettingsData;
+        %tmp.4 = lgetv %self;
+        %tmp.5 = getv %tmp.4 :ButtonID;
+        %tmp.6 = agetv %tmp.3 %tmp.5;
+        %tmp.7 = lgetv %Value;
+        %tmp.8 = getv function %tmp.7 :toNumber;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = "REF";
+        aputv %tmp.6 %tmp.10 %tmp.9;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_22_28_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_false:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_28_13_30_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 29 12 ]
+        %tmp.11 = getv self :SettingsData;
+        %tmp.12 = lgetv %Value;
+        %tmp.13 = getv function %tmp.12 :toNumber;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = lgetv %self;
+        %tmp.16 = getv %tmp.15 :ButtonID;
+        aputv %tmp.11 %tmp.16 %tmp.14;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_28_13_30_8_stop:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_26_8_30_8_if_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 31 8 ]
+        %tmp.17 = getm $.Toybox.Application.Storage;
+        %tmp.18 = getv function %tmp.17 :setValue;
+        %tmp.20 = lgetv %Key;
+        %tmp.22 = getv ? :SettingsData;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc" 32 8 ]
+        ret ?;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_Settings_ModifySettingsDel_mc_25_61_33_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\Settings\ModifySettingsDel.mc"; @line = 1; ]
+<init> {
+}

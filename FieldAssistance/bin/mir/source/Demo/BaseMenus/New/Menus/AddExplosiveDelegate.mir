@@ -1,0 +1,140 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 5; ]
+class AddExplosiveDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 7; @position = 16; ]
+    private
+    var ME;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 9; ]
+    function initialize(ME as ManageExplosives) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_9_48_12_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 10 8 ]
+        %tmp.2 = lgetv %ME;
+        putv self :ME %tmp.2;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 11 8 ]
+        %tmp.4 = getv ? :Menu2InputDelegate;
+        %tmp.5 = getv function %tmp.4 :initialize;
+        invoke %tmp.4 %tmp.5();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_9_48_12_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 14; ]
+    function onMenu() as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_14_33_16_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 15 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_14_33_16_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 18; ]
+    public
+    function onSelect(item as MenuItem) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_18_55_32_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 19 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_18_55_32_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_18_55_32_4_stop" ]
+        %chosenOption.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getLabel;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %chosenOption.1 %tmp.3;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 20 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_stmt:
+        %tmp.4 = lgetv %chosenOption.1;
+        %tmp.5 = getv function %tmp.4 :equals;
+        %tmp.6 = "Add";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        bf %tmp.7 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_39_23_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 21 12 ]
+        %tmp.8 = getm $.Toybox.WatchUi;
+        %tmp.9 = getv function %tmp.8 :popView;
+        %tmp.10 = getm $.Toybox.WatchUi;
+        %tmp.11 = getv %tmp.10 :SLIDE_IMMEDIATE;
+        invoke %tmp.8 %tmp.9(%tmp.11);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 22 12 ]
+        %tmp.13 = getv ? :ME;
+        %tmp.14 = getv function %tmp.13 :createExplsovieOptions;
+        invoke %tmp.13 %tmp.14();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_39_23_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_false:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 23 14 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_stmt:
+        %tmp.15 = lgetv %chosenOption.1;
+        %tmp.16 = getv function %tmp.15 :equals;
+        %tmp.17 = "Done";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        bf %tmp.18 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_46_26_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 24 12 ]
+        %tmp.19 = getm $.Toybox.WatchUi;
+        %tmp.20 = getv function %tmp.19 :popView;
+        %tmp.21 = getm $.Toybox.WatchUi;
+        %tmp.22 = getv %tmp.21 :SLIDE_IMMEDIATE;
+        invoke %tmp.19 %tmp.20(%tmp.22);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 25 12 ]
+        %tmp.24 = getv ? :ME;
+        %tmp.25 = getv function %tmp.24 :Calculate;
+        invoke %tmp.24 %tmp.25();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_46_26_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_false:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 26 14 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_stmt:
+        %tmp.26 = lgetv %chosenOption.1;
+        %tmp.27 = getv function %tmp.26 :equals;
+        %tmp.28 = "Discard";
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        bf %tmp.29 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_48_29_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 27 12 ]
+        %tmp.30 = getm $.Toybox.WatchUi;
+        %tmp.31 = getv function %tmp.30 :popView;
+        %tmp.32 = getm $.Toybox.WatchUi;
+        %tmp.33 = getv %tmp.32 :SLIDE_IMMEDIATE;
+        invoke %tmp.30 %tmp.31(%tmp.33);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 28 12 ]
+        %tmp.35 = getv ? :ME;
+        %tmp.36 = getv function %tmp.35 :resetCurrentExplosiveCharge;
+        invoke %tmp.35 %tmp.36();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_48_29_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_false:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_26_14_31_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_23_14_31_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_20_8_31_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_18_55_32_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 33; ]
+    public
+    function onBack() as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_33_37_36_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 34 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc" 35 8 ]
+        %tmp.6 = getv ? :ME;
+        %tmp.7 = getv function %tmp.6 :resetCurrentExplosiveCharge;
+        invoke %tmp.6 %tmp.7();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_AddExplosiveDelegate_mc_33_37_36_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\AddExplosiveDelegate.mc"; @line = 1; ]
+<init> {
+}

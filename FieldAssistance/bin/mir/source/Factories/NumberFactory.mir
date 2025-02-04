@@ -1,0 +1,238 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 7; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 9; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 12; ]
+class NumberFactory extends WatchUi.PickerFactory{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 12; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 13; @position = 16; ]
+    private
+    var _start as Number;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 14; @position = 16; ]
+    private
+    var _stop as Number;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 15; @position = 16; ]
+    private
+    var _increment as Number;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 16; @position = 16; ]
+    private
+    var _formatString as String;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 17; @position = 16; ]
+    private
+    var _font as FontDefinition;
+    //! Constructor
+    //! @param start Number to start with
+    //! @param stop Number to end with
+    //! @param increment How far apart the numbers should be
+    //! @param options Dictionary of options
+    //! @option options :font The font to use
+    //! @option options :format The number format to display
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 26; ]
+    public
+function initialize(start as Number, stop as Number, increment as Number, options as {:font as FontDefinition, :format as String}) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 30 8 ]
+    %tmp.2 = getv ? :PickerFactory;
+    %tmp.3 = getv function %tmp.2 :initialize;
+    invoke %tmp.2 %tmp.3();
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 31 8 ]
+    %tmp.5 = lgetv %start;
+    putv self :_start %tmp.5;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 32 8 ]
+    %tmp.7 = lgetv %stop;
+    putv self :_stop %tmp.7;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 33 8 ]
+    %tmp.9 = lgetv %increment;
+    putv self :_increment %tmp.9;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 35 8 ]
+    [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_stop" ]
+    %format.1 = local;
+    %tmp.10 = lgetv %options;
+    %tmp.11 = getv function %tmp.10 :get;
+    %tmp.13 = const :format;
+    %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+    lputv %format.1 %tmp.14;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 36 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_stmt:
+    %tmp.16 = lgetv %format.1;
+    %tmp.17 = null;
+    %tmp.18 = ne %tmp.16 %tmp.17;
+    bf %tmp.18 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_28_38_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 37 12 ]
+    %tmp.20 = lgetv %format.1;
+    %tmp.21 = as %tmp.20 { (!Null) };
+    putv self :_formatString %tmp.21;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_28_38_8_stop:
+    goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_false:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_38_15_40_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 39 12 ]
+    %tmp.22 = "%d";
+    putv self :_formatString %tmp.22;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_38_15_40_8_stop:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_36_8_40_8_if_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 42 8 ]
+    [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_stop" ]
+    %font.2 = local;
+    %tmp.23 = lgetv %options;
+    %tmp.24 = getv function %tmp.23 :get;
+    %tmp.26 = const :font;
+    %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
+    lputv %font.2 %tmp.27;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 43 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_stmt:
+    %tmp.29 = lgetv %font.2;
+    %tmp.30 = null;
+    %tmp.31 = ne %tmp.29 %tmp.30;
+    bf %tmp.31 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_26_45_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 44 12 ]
+    %tmp.33 = lgetv %font.2;
+    %tmp.34 = as %tmp.33 { (!Null) };
+    putv self :_font %tmp.34;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_26_45_8_stop:
+    goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_false:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_45_15_47_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 46 12 ]
+    %tmp.35 = getm $.Toybox.Graphics;
+    %tmp.36 = getv %tmp.35 :FONT_NUMBER_HOT;
+    putv self :_font %tmp.36;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_45_15_47_8_stop:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_43_8_47_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_29_7_48_4_stop:
+}
+//! Get the index of a number item
+//! @param value The number to get the index of
+//! @return The index of the number
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 53; ]
+public
+function getIndex(value as Number) as Number {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_53_56_55_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 54 8 ]
+    %tmp.2 = lgetv %value;
+    %tmp.4 = getv ? :_increment;
+    %tmp.5 = div %tmp.2 %tmp.4;
+    %tmp.7 = getv ? :_start;
+    %tmp.8 = sub %tmp.5 %tmp.7;
+    ret %tmp.8;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_53_56_55_4_stop:
+}
+//! Generate a Drawable instance for an item
+//! @param index The item index
+//! @param selected true if the current item is selected, false otherwise
+//! @return Drawable for the item
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 61; ]
+public
+function getDrawable(index as Number, selected as Boolean) as Drawable or Null {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 62 8 ]
+    [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_stop" ]
+    %value.1 = local;
+    %tmp.1 = self;
+    %tmp.2 = getv function %tmp.1 :getValue;
+    %tmp.4 = lgetv %index;
+    %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+    lputv %value.1 %tmp.5;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 63 8 ]
+    [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_stop" ]
+    %text.2 = local;
+    %tmp.6 = "No item";
+    lputv %text.2 %tmp.6;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 64 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_8_66_8_if_stmt:
+    %tmp.8 = lgetv %value.1;
+    %tmp.10 = getv ? :Number;
+    %tmp.11 = isa %tmp.8 %tmp.10;
+    bf %tmp.11 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_8_66_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_8_66_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_37_66_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 65 12 ]
+    %tmp.12 = lgetv %value.1;
+    %tmp.13 = as %tmp.12 { (Number) };
+    %tmp.14 = getv function %tmp.13 :format;
+    %tmp.16 = getv ? :_formatString;
+    %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+    lputv %text.2 %tmp.17;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_37_66_8_stop:
+    goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_8_66_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_64_8_66_8_if_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 67 8 ]
+    %tmp.20 = getm $.Toybox.WatchUi;
+    %tmp.21 = getv function ? %tmp.20 :Text;
+    %tmp.22 = newd 5;
+    %tmp.24 = const :text;
+    %tmp.26 = lgetv %text.2;
+    %tmp.27 = dup %tmp.22;
+    %tmp.28 = aputv %tmp.27 %tmp.24 %tmp.26;
+    %tmp.30 = const :color;
+    %tmp.31 = getm $.Toybox.Graphics;
+    %tmp.32 = getv %tmp.31 :COLOR_WHITE;
+    %tmp.33 = dup %tmp.28;
+    %tmp.34 = aputv %tmp.33 %tmp.30 %tmp.32;
+    %tmp.36 = const :font;
+    %tmp.38 = getv ? :_font;
+    %tmp.39 = dup %tmp.34;
+    %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+    %tmp.42 = const :locX;
+    %tmp.43 = getm $.Toybox.WatchUi;
+    %tmp.44 = getv %tmp.43 :LAYOUT_HALIGN_CENTER;
+    %tmp.45 = dup %tmp.40;
+    %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+    %tmp.48 = const :locY;
+    %tmp.49 = getm $.Toybox.WatchUi;
+    %tmp.50 = getv %tmp.49 :LAYOUT_VALIGN_CENTER;
+    %tmp.51 = dup %tmp.46;
+    %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+    %tmp.18 = newc %tmp.21 (%tmp.52);
+    ret %tmp.18;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_61_83_69_4_stop:
+}
+//! Get the value of the item at the given index
+//! @param index Index of the item to get the value of
+//! @return Value of the item
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 74; ]
+public
+function getValue(index as Number) as Object or Null {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_74_57_76_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 75 8 ]
+    %tmp.2 = getv ? :_start;
+    %tmp.4 = lgetv %index;
+    %tmp.6 = getv ? :_increment;
+    %tmp.7 = mul %tmp.4 %tmp.6;
+    %tmp.8 = add %tmp.2 %tmp.7;
+    ret %tmp.8;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_74_57_76_4_stop:
+}
+//! Get the number of picker items
+//! @return Number of items
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 80; ]
+public
+function getSize() as Number {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_80_40_82_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc" 81 8 ]
+    %tmp.2 = getv ? :_stop;
+    %tmp.4 = getv ? :_start;
+    %tmp.5 = sub %tmp.2 %tmp.4;
+    %tmp.7 = getv ? :_increment;
+    %tmp.8 = div %tmp.5 %tmp.7;
+    %tmp.9 = 1;
+    %tmp.10 = add %tmp.8 %tmp.9;
+    ret %tmp.10;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Factories_NumberFactory_mc_80_40_82_4_stop:
+}
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Factories\NumberFactory.mc"; @line = 7; ]
+<init> {
+}

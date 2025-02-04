@@ -1,0 +1,82 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 5; ]
+class CreateExplosivesDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 7; @position = 16; ]
+    private
+    var ME;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 9; ]
+    function initialize(ME as ManageExplosives) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_9_48_12_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 10 8 ]
+        %tmp.2 = lgetv %ME;
+        putv self :ME %tmp.2;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 11 8 ]
+        %tmp.4 = getv ? :Menu2InputDelegate;
+        %tmp.5 = getv function %tmp.4 :initialize;
+        invoke %tmp.4 %tmp.5();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_9_48_12_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 14; ]
+    function onMenu() as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_14_33_16_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 15 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_14_33_16_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 18; ]
+    public
+    function onSelect(item as MenuItem) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_18_55_22_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 19 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_18_55_22_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_18_55_22_4_stop" ]
+        %chosenOption.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getLabel;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %chosenOption.1 %tmp.3;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 20 8 ]
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv function %tmp.4 :popView;
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv %tmp.6 :SLIDE_IMMEDIATE;
+        invoke %tmp.4 %tmp.5(%tmp.7);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 21 8 ]
+        %tmp.9 = getv ? :ME;
+        %tmp.10 = getv function %tmp.9 :setExplosiveValues;
+        %tmp.12 = lgetv %chosenOption.1;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_18_55_22_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 24; ]
+    public
+    function onBack() as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_24_37_27_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 25 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc" 26 8 ]
+        %tmp.6 = getv ? :ME;
+        %tmp.7 = getv function %tmp.6 :createExplosiveList;
+        invoke %tmp.6 %tmp.7();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_New_Menus_CreateExplosivesDelegate_mc_24_37_27_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\New\Menus\CreateExplosivesDelegate.mc"; @line = 1; ]
+<init> {
+}

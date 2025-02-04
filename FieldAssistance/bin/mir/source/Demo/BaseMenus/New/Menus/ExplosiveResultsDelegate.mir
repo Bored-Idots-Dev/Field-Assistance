@@ -1,0 +1,274 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 4; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 5; ]
+using Toybox.Time.Gregorian as :Calendar;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 6; ]
+import Toybox.System;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 8; ]
+class ExplosiveResultsDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 10; @position = 16; ]
+    private
+    var MRED;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 12; @position = 16; ]
+    private
+    var _HistoryKey = "_FA_HistoryEXPData";
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 14; ]
+    function initialize(MRED) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_14_30_17_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 15 8 ]
+        %tmp.2 = lgetv %MRED;
+        putv self :MRED %tmp.2;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 16 8 ]
+        %tmp.4 = getv ? :Menu2InputDelegate;
+        %tmp.5 = getv function %tmp.4 :initialize;
+        invoke %tmp.4 %tmp.5();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_14_30_17_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 19; ]
+    function onMenu() as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_19_33_21_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 20 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_19_33_21_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 23; ]
+    public
+    function onSelect(item as MenuItem) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_23_55_46_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 24 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_23_55_46_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_23_55_46_4_stop" ]
+        %chosenOption.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getLabel;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %chosenOption.1 %tmp.3;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 25 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_8_45_8_if_stmt:
+        %tmp.4 = lgetv %chosenOption.1;
+        %tmp.5 = getv function %tmp.4 :equals;
+        %tmp.6 = "Done";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        bf %tmp.7 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_8_45_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_8_45_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 26 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_stop" ]
+        %historyOfEXPData.2 = local;
+        %tmp.8 = newa 10;
+        %tmp.9 = newd 0;
+        %tmp.10 = dup %tmp.8;
+        %tmp.11 = aputv %tmp.10 0 %tmp.9;
+        %tmp.12 = newd 0;
+        %tmp.13 = dup %tmp.11;
+        %tmp.14 = aputv %tmp.13 1 %tmp.12;
+        %tmp.15 = newd 0;
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 2 %tmp.15;
+        %tmp.18 = newd 0;
+        %tmp.19 = dup %tmp.17;
+        %tmp.20 = aputv %tmp.19 3 %tmp.18;
+        %tmp.21 = newd 0;
+        %tmp.22 = dup %tmp.20;
+        %tmp.23 = aputv %tmp.22 4 %tmp.21;
+        %tmp.24 = newd 0;
+        %tmp.25 = dup %tmp.23;
+        %tmp.26 = aputv %tmp.25 5 %tmp.24;
+        %tmp.27 = newd 0;
+        %tmp.28 = dup %tmp.26;
+        %tmp.29 = aputv %tmp.28 6 %tmp.27;
+        %tmp.30 = newd 0;
+        %tmp.31 = dup %tmp.29;
+        %tmp.32 = aputv %tmp.31 7 %tmp.30;
+        %tmp.33 = newd 0;
+        %tmp.34 = dup %tmp.32;
+        %tmp.35 = aputv %tmp.34 8 %tmp.33;
+        %tmp.36 = newd 0;
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 9 %tmp.36;
+        lputv %historyOfEXPData.2 %tmp.38;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 27 12 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_12_29_12_if_stmt:
+        %tmp.39 = getm $.Toybox.Application.Storage;
+        %tmp.40 = getv function %tmp.39 :getValue;
+        %tmp.42 = getv ? :_HistoryKey;
+        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
+        %tmp.44 = null;
+        %tmp.45 = ne %tmp.43 %tmp.44;
+        bf %tmp.45 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_12_29_12_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_12_29_12_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_54_29_12_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 28 16 ]
+        %tmp.46 = getm $.Toybox.Application.Storage;
+        %tmp.47 = getv function %tmp.46 :getValue;
+        %tmp.49 = getv ? :_HistoryKey;
+        %tmp.50 = invoke %tmp.46 %tmp.47(%tmp.49);
+        lputv %historyOfEXPData.2 %tmp.50;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_54_29_12_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_12_29_12_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_27_12_29_12_if_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 30 12 ]
+        for @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_test @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_incr @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_init:
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_begin" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_end" ]
+        %i.3 = local;
+        %tmp.51 = lgetv %historyOfEXPData.2;
+        %tmp.52 = getv function %tmp.51 :size;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        %tmp.54 = 1;
+        %tmp.55 = sub %tmp.53 %tmp.54;
+        lputv %i.3 %tmp.55;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_test:
+        %tmp.57 = lgetv %i.3;
+        %tmp.58 = 0;
+        %tmp.59 = gt %tmp.57 %tmp.58;
+        bf %tmp.59 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_begin:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_66_32_12_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 31 16 ]
+        %tmp.60 = lgetv %historyOfEXPData.2;
+        %tmp.62 = lgetv %historyOfEXPData.2;
+        %tmp.64 = lgetv %i.3;
+        %tmp.65 = 1;
+        %tmp.66 = sub %tmp.64 %tmp.65;
+        %tmp.67 = agetv %tmp.62 %tmp.66;
+        %tmp.69 = lgetv %i.3;
+        aputv %tmp.60 %tmp.69 %tmp.67;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_66_32_12_stop:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_incr:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 30 ]
+        %tmp.72 = lgetv %i.3;
+        %tmp.73 = sub %tmp.72 1;
+        lputv %i.3 %tmp.73;
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_test;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_30_12_32_12_for_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 33 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_stop" ]
+        %date.4 = local;
+        %tmp.74 = getm $.Toybox.Time.Gregorian;
+        %tmp.75 = getv function %tmp.74 :info;
+        %tmp.77 = getv ? :Time;
+        %tmp.78 = getv function %tmp.77 :now;
+        %tmp.79 = invoke %tmp.77 %tmp.78();
+        %tmp.81 = getv ? :Time;
+        %tmp.82 = getv %tmp.81 :FORMAT_MEDIUM;
+        %tmp.83 = invoke %tmp.74 %tmp.75(%tmp.79, %tmp.82);
+        lputv %date.4 %tmp.83;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 34 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_stop" ]
+        %key.5 = local;
+        %tmp.84 = getm $.Toybox.Lang;
+        %tmp.85 = getv function %tmp.84 :format;
+        %tmp.86 = "$1$-$2$-$3$ $4$:$5$";
+        %tmp.87 = newa 5;
+        %tmp.88 = lgetv %date.4;
+        %tmp.89 = getv %tmp.88 :day;
+        %tmp.90 = dup %tmp.87;
+        %tmp.91 = aputv %tmp.90 0 %tmp.89;
+        %tmp.92 = lgetv %date.4;
+        %tmp.93 = getv %tmp.92 :month;
+        %tmp.94 = dup %tmp.91;
+        %tmp.95 = aputv %tmp.94 1 %tmp.93;
+        %tmp.96 = lgetv %date.4;
+        %tmp.97 = getv %tmp.96 :year;
+        %tmp.98 = dup %tmp.95;
+        %tmp.99 = aputv %tmp.98 2 %tmp.97;
+        %tmp.100 = lgetv %date.4;
+        %tmp.101 = getv %tmp.100 :hour;
+        %tmp.102 = dup %tmp.99;
+        %tmp.103 = aputv %tmp.102 3 %tmp.101;
+        %tmp.104 = lgetv %date.4;
+        %tmp.105 = getv %tmp.104 :min;
+        %tmp.106 = dup %tmp.103;
+        %tmp.107 = aputv %tmp.106 4 %tmp.105;
+        %tmp.108 = invoke %tmp.84 %tmp.85(%tmp.86, %tmp.107);
+        lputv %key.5 %tmp.108;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 35 12 ]
+        %tmp.109 = lgetv %historyOfEXPData.2;
+        %tmp.110 = newd 5;
+        %tmp.111 = "Key";
+        %tmp.113 = lgetv %key.5;
+        %tmp.114 = dup %tmp.110;
+        %tmp.115 = aputv %tmp.114 %tmp.111 %tmp.113;
+        %tmp.116 = "NEW";
+        %tmp.118 = getv ? :MRED;
+        %tmp.119 = 0;
+        %tmp.120 = agetv %tmp.118 %tmp.119;
+        %tmp.121 = 1;
+        %tmp.122 = agetv %tmp.120 %tmp.121;
+        %tmp.123 = dup %tmp.115;
+        %tmp.124 = aputv %tmp.123 %tmp.116 %tmp.122;
+        %tmp.125 = "Shielded Standoff";
+        %tmp.127 = getv ? :MRED;
+        %tmp.128 = 1;
+        %tmp.129 = agetv %tmp.127 %tmp.128;
+        %tmp.130 = 1;
+        %tmp.131 = agetv %tmp.129 %tmp.130;
+        %tmp.132 = dup %tmp.124;
+        %tmp.133 = aputv %tmp.132 %tmp.125 %tmp.131;
+        %tmp.134 = "Unshielded Standoff";
+        %tmp.136 = getv ? :MRED;
+        %tmp.137 = 2;
+        %tmp.138 = agetv %tmp.136 %tmp.137;
+        %tmp.139 = 1;
+        %tmp.140 = agetv %tmp.138 %tmp.139;
+        %tmp.141 = dup %tmp.133;
+        %tmp.142 = aputv %tmp.141 %tmp.134 %tmp.140;
+        %tmp.143 = "Safe Frag";
+        %tmp.145 = getv ? :MRED;
+        %tmp.146 = 3;
+        %tmp.147 = agetv %tmp.145 %tmp.146;
+        %tmp.148 = 1;
+        %tmp.149 = agetv %tmp.147 %tmp.148;
+        %tmp.150 = dup %tmp.142;
+        %tmp.151 = aputv %tmp.150 %tmp.143 %tmp.149;
+        %tmp.152 = 0;
+        aputv %tmp.109 %tmp.152 %tmp.151;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 42 12 ]
+        %tmp.153 = getm $.Toybox.Application.Storage;
+        %tmp.154 = getv function %tmp.153 :setValue;
+        %tmp.156 = getv ? :_HistoryKey;
+        %tmp.158 = lgetv %historyOfEXPData.2;
+        invoke %tmp.153 %tmp.154(%tmp.156, %tmp.158);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 43 12 ]
+        %tmp.159 = getm $.Toybox.WatchUi;
+        %tmp.160 = getv function %tmp.159 :popView;
+        %tmp.161 = getm $.Toybox.WatchUi;
+        %tmp.162 = getv %tmp.161 :SLIDE_IMMEDIATE;
+        invoke %tmp.159 %tmp.160(%tmp.162);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 44 12 ]
+        ret ?;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_40_45_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_8_45_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_25_8_45_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_23_55_46_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 47; ]
+    public
+    function onBack() as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_47_37_49_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc" 48 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :popView;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_Demo_BaseMenus_New_Menus_ExplosiveResultsDelegate_mc_47_37_49_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\Demo\BaseMenus\New\Menus\ExplosiveResultsDelegate.mc"; @line = 1; ]
+<init> {
+}

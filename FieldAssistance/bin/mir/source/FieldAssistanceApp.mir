@@ -1,0 +1,61 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 5; ]
+class FieldAssistanceApp extends Application.AppBase{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 7; ]
+    function initialize() as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_7_26_9_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc" 8 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_7_26_9_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 12; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 17; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 21; ]
+    function getInitialView() as [Views] or [Views, InputDelegates] {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_21_68_23_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc" 22 8 ]
+        %tmp.1 = newa 2;
+        %tmp.5 = getv ? :FieldAssistanceView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        %tmp.11 = getv ? :FieldAssistanceDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 1 %tmp.8;
+        ret %tmp.13;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_21_68_23_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 27; ]
+function getApp() as FieldAssistanceApp {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_27_40_29_0_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc" 28 4 ]
+    %tmp.1 = getm $.Toybox.Application;
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 FieldAssistanceApp;
+    ret %tmp.4;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_FieldAssistanceApp_mc_27_40_29_0_stop:
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\FieldAssistanceApp.mc"; @line = 1; ]
+<init> {
+}

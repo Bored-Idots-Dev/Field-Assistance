@@ -1,0 +1,25 @@
+<strings>
+    <string id="AppName">Field Assitance</string>
+    <string id="Author">Bored Idots</string>
+<!--Main Menu-->
+    <string id="CalcExp">Demolition</string>
+    <string id = "Next">Start</string>
+<!--Explosive Picker-->
+    <string id="ExpPicTitle">Pick an Explosive</string>
+    <string id="Weight">Weight: </string>
+    <string id="QTY">Qty: </string>
+    <string id="Separator">.</string>
+    <string id="GrainsText">Grains</string>
+    <string id="LbsText">lbs</string>
+    <!--Explosive types-->
+        <string id="C4">C4</string>
+        <string id="RDX">RDX</string>
+        <string id="Dyno">M1 Dynamite</string>
+        <string id="TNT">TNT</string>
+        <string id="DetCord">PETN</string>
+    <!--Add more explosives-->
+        <string id="MoreExp">Add</string>
+        <string id="DoneExp">Done</string>
+<!--Fuze Timer-->
+    <string id="timeSearator">:</string>
+</strings>

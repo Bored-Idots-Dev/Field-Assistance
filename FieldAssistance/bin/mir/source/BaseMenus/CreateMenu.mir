@@ -1,0 +1,234 @@
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 4; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 6; ]
+class CreateMenu{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 8; ]
+    public static
+    function developNewMenu(Options as Array<Array<String>>, MenuTitle as String, delegate as Menu2InputDelegate) as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_8_138_22_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 9 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_8_138_22_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_8_138_22_4_stop" ]
+        %newMenu2.1 = local;
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv function ? %tmp.3 :Menu2;
+        %tmp.5 = newd 1;
+        %tmp.7 = const :title;
+        %tmp.9 = lgetv %MenuTitle;
+        %tmp.10 = dup %tmp.5;
+        %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+        %tmp.1 = newc %tmp.4 (%tmp.11);
+        lputv %newMenu2.1 %tmp.1;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 10 8 ]
+        for @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_test @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_incr @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_init:
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_begin" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_end" ]
+        %i.2 = local;
+        %tmp.12 = 0;
+        lputv %i.2 %tmp.12;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_test:
+        %tmp.14 = lgetv %i.2;
+        %tmp.15 = lgetv %Options;
+        %tmp.16 = getv function %tmp.15 :size;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = lt %tmp.14 %tmp.17;
+        bf %tmp.18 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_begin:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_48_19_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 11 12 ]
+        %tmp.19 = lgetv %newMenu2.1;
+        %tmp.20 = getv function %tmp.19 :addItem;
+        %tmp.24 = getv ? :MenuItem;
+        %tmp.26 = lgetv %Options;
+        %tmp.28 = lgetv %i.2;
+        %tmp.29 = agetv %tmp.26 %tmp.28;
+        %tmp.30 = 0;
+        %tmp.31 = agetv %tmp.29 %tmp.30;
+        %tmp.33 = lgetv %Options;
+        %tmp.35 = lgetv %i.2;
+        %tmp.36 = agetv %tmp.33 %tmp.35;
+        %tmp.37 = 1;
+        %tmp.38 = agetv %tmp.36 %tmp.37;
+        %tmp.40 = lgetv %MenuTitle;
+        %tmp.41 = "_";
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.44 = lgetv %i.2;
+        %tmp.45 = add %tmp.42 %tmp.44;
+        %tmp.46 = "_";
+        %tmp.47 = add %tmp.45 %tmp.46;
+        %tmp.49 = lgetv %Options;
+        %tmp.51 = lgetv %i.2;
+        %tmp.52 = agetv %tmp.49 %tmp.51;
+        %tmp.53 = add %tmp.47 %tmp.52;
+        %tmp.54 = newd 0;
+        %tmp.21 = newc %tmp.24 (%tmp.31, %tmp.38, %tmp.53, %tmp.54);
+        invoke %tmp.19 %tmp.20(%tmp.21);
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_48_19_8_stop:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_incr:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 10 ]
+        %tmp.57 = lgetv %i.2;
+        %tmp.58 = add %tmp.57 1;
+        lputv %i.2 %tmp.58;
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_test;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_10_8_19_8_for_end:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 20 8 ]
+        %tmp.59 = getm $.Toybox.WatchUi;
+        %tmp.60 = getv function %tmp.59 :pushView;
+        %tmp.62 = lgetv %newMenu2.1;
+        %tmp.64 = lgetv %delegate;
+        %tmp.65 = getm $.Toybox.WatchUi;
+        %tmp.66 = getv %tmp.65 :SLIDE_IMMEDIATE;
+        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64, %tmp.66);
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 21 8 ]
+        %tmp.67 = true;
+        ret %tmp.67;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_8_138_22_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 26; ]
+class CreateMenuDelegate extends WatchUi.Menu2InputDelegate{
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 26; ]
+    <init> {
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 28 16 ]
+        %tmp.71 = getv ? :ManageExplosives;
+        %tmp.68 = newc %tmp.71 ();
+        putv self :ME %tmp.68;
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 28; @position = 16; ]
+    private
+    var ME;
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 30; ]
+    function initialize() as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_30_26_32_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 31 8 ]
+        %tmp.2 = getv ? :Menu2InputDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_30_26_32_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 34; ]
+    function onMenu() as Boolean {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_34_33_36_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 35 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_34_33_36_4_stop:
+    }
+    [ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 38; ]
+    public
+    function onSelect(item as MenuItem) as Void {
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_38_55_52_4_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 39 8 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_38_55_52_4_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_38_55_52_4_stop" ]
+        %chosenOption.1 = local;
+        %tmp.1 = lgetv %item;
+        %tmp.2 = getv function %tmp.1 :getLabel;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %chosenOption.1 %tmp.3;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 40 8 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_stmt:
+        %tmp.4 = lgetv %chosenOption.1;
+        %tmp.5 = getv function %tmp.4 :equals;
+        %tmp.6 = "New";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        bf %tmp.7 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_40_42_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 41 12 ]
+        %tmp.9 = getv ? :ME;
+        %tmp.10 = getv function %tmp.9 :createExplosiveList;
+        invoke %tmp.9 %tmp.10();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_40_42_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_false:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 42 14 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_stmt:
+        %tmp.11 = lgetv %chosenOption.1;
+        %tmp.12 = getv function %tmp.11 :equals;
+        %tmp.13 = "History";
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        bf %tmp.14 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_49_45_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 43 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_49_45_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_49_45_8_stop" ]
+        %historyHandler.2 = local;
+        %tmp.18 = getv ? :HistoryViewer;
+        %tmp.15 = newc %tmp.18 ();
+        lputv %historyHandler.2 %tmp.15;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 44 12 ]
+        %tmp.19 = lgetv %historyHandler.2;
+        %tmp.20 = getv function %tmp.19 :viewHistory;
+        invoke %tmp.19 %tmp.20();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_49_45_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_false:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 45 14 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_stmt:
+        %tmp.21 = lgetv %chosenOption.1;
+        %tmp.22 = getv function %tmp.21 :equals;
+        %tmp.23 = "Clear";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        bf %tmp.24 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_false;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_47_48_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 46 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_47_48_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_47_48_8_stop" ]
+        %cHH.3 = local;
+        %tmp.28 = getv ? :ClearCurrentHistory;
+        %tmp.25 = newc %tmp.28 ();
+        lputv %cHH.3 %tmp.25;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 47 12 ]
+        %tmp.29 = lgetv %cHH.3;
+        %tmp.30 = getv function %tmp.29 :clearHistoryData;
+        invoke %tmp.29 %tmp.30();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_47_48_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_false:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 48 14 ]
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_14_51_8_if_stmt:
+        %tmp.31 = lgetv %chosenOption.1;
+        %tmp.32 = getv function %tmp.31 :equals;
+        %tmp.33 = "Settings";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        bf %tmp.34 @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_14_51_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_14_51_8_if_true:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_50_51_8_start:
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 49 12 ]
+        [ "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_50_51_8_start" "C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_50_51_8_stop" ]
+        %stt.4 = local;
+        %tmp.38 = getv ? :SettingsViewer;
+        %tmp.35 = newc %tmp.38 ();
+        lputv %stt.4 %tmp.35;
+[ "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc" 50 12 ]
+        %tmp.39 = lgetv %stt.4;
+        %tmp.40 = getv function %tmp.39 :ViewSettings;
+        invoke %tmp.39 %tmp.40();
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_50_51_8_stop:
+        goto @C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_14_51_8_if_end;
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_48_14_51_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_45_14_51_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_42_14_51_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_40_8_51_8_if_end:
+C_Users_Door_Documents_Workspace_Garmin_Field_Assistance_FieldAssistance_source_BaseMenus_CreateMenu_mc_38_55_52_4_stop:
+    }
+}
+[ @file = "C:\Users\Door\Documents\Workspace\Garmin\Field Assistance\FieldAssistance\source\BaseMenus\CreateMenu.mc"; @line = 1; ]
+<init> {
+}
